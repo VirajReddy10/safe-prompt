@@ -1,0 +1,6 @@
+faker==25.0.0
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+jupyter==1.0.0
+pytest==8.2.0
