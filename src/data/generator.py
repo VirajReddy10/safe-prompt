@@ -100,7 +100,10 @@ def _gen_ssn() -> str:
 
 
 def _gen_credit_card() -> str:
-    return fake.credit_card_number()
+    # Force realistic card lengths (Visa/Mastercard: 16 digits, Amex: 15).
+    # Faker's default can sometimes produce shorter (12-digit) numbers
+    # depending on card type, which don't reflect real-world card formats.
+    return fake.credit_card_number(card_type=random.choice(["visa", "mastercard", "amex"]))
 
 
 def _gen_name() -> str:
