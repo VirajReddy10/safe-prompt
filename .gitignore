@@ -225,3 +225,4 @@ data/processed/
 models/
 wandb/
 .DS_Store
+models/
